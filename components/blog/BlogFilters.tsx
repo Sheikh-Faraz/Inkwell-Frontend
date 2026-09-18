@@ -76,9 +76,14 @@ export default function BlogFilters({
 
         <Select
           value={category}
-          onValueChange={setCategory}
+          onValueChange={(value) => {
+            if (value !== null) {
+              setCategory(value);
+            }
+          }}
+          // onValueChange={setCategory}
         >
-          <SelectTrigger className="w-full sm:w-[200px]">
+          <SelectTrigger className="w-full sm:w-50">
             <SelectValue placeholder="Category" />
           </SelectTrigger>
 
