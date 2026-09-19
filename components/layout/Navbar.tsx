@@ -22,10 +22,6 @@ const navLinks = [
     label: "Home",
     href: "/",
   },
-  {
-    label: "Start creating blogs",
-    href: "https://blogs-cms-bakce.vercel.app",
-  },
 ];
 
 export default function Navbar() {
@@ -142,6 +138,14 @@ export default function Navbar() {
               </Link>
             ))}
           </nav>
+
+          <Link 
+            href="https://blogs-cms-bakce.vercel.app/login"
+            target="_blank"
+            className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+          >
+            Start creating blogs
+          </Link>
 
           <div className="hidden md:block">
             <ThemeToggle />
