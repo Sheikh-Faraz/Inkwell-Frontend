@@ -142,7 +142,7 @@ export default function Navbar() {
           <Link 
             href="https://blogs-cms-bakce.vercel.app/login"
             target="_blank"
-            className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+            className="hidden md:flex text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
           >
             Start creating blogs
           </Link>
@@ -155,7 +155,6 @@ export default function Navbar() {
           <div className="md:hidden">
             <Sheet>
               <SheetTrigger 
-                // asChild
               >
                 <Button
                   variant="ghost"
@@ -168,7 +167,16 @@ export default function Navbar() {
 
               <SheetContent>
                 <SheetHeader>
-                  <SheetTitle>Inkwell</SheetTitle>
+                  
+                  <SheetTitle className="flex gap-2">
+                    <div className="rounded-lg bg-orange-600 p-1">
+                      <InkwellLogo className="text-white" />
+                    </div>
+                    <p>
+                      Inkwell
+                    </p>
+                  </SheetTitle>
+
                 </SheetHeader>
 
                 <div className="mt-6 flex items-center justify-between px-4">
@@ -190,6 +198,15 @@ export default function Navbar() {
                     </Link>
                   ))}
                 </nav>
+
+                <Link 
+                  href="https://blogs-cms-bakce.vercel.app/login"
+                  target="_blank"
+                  className="mt-6 px-4 text-sm font-medium transition-colors hover:text-foreground"
+                >
+                  Start creating blogs
+                </Link>
+
               </SheetContent>
             </Sheet>
           </div>
