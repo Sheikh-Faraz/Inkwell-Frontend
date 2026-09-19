@@ -22,6 +22,10 @@ const navLinks = [
     label: "Home",
     href: "/",
   },
+  {
+    label: "Start creating blogs",
+    href: "https://blogs-cms-bakce.vercel.app",
+  },
 ];
 
 export default function Navbar() {
