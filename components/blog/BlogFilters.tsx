@@ -81,7 +81,39 @@ export default function BlogFilters({
               setCategory(value);
             }
           }}
-          // onValueChange={setCategory}
+        >
+          <SelectTrigger className="w-full min-w-0 sm:w-50">
+            <SelectValue placeholder="Category">
+              <span className="block min-w-0 truncate">
+                {category === "all"
+                  ? "All categories"
+                  : categories.find(([id]) => id === category)?.[1]}
+              </span>
+            </SelectValue>
+          </SelectTrigger>
+
+          <SelectContent>
+            <SelectItem value="all">
+              All categories
+            </SelectItem>
+
+            {categories.map(([id, name]) => (
+              <SelectItem key={id} value={id}>
+                <span className="block max-w-40 truncate">
+                  {name}
+                </span>
+              </SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
+
+        {/* <Select
+          value={category}
+          onValueChange={(value) => {
+            if (value !== null) {
+              setCategory(value);
+            }
+          }}
         >
           <SelectTrigger className="w-full sm:w-50">
             <SelectValue placeholder="Category" />
@@ -98,7 +130,7 @@ export default function BlogFilters({
               </SelectItem>
             ))}
           </SelectContent>
-        </Select>
+        </Select> */}
       </div>
 
       {/* Results */}
