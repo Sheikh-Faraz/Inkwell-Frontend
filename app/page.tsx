@@ -10,7 +10,7 @@ export default async function Home() {
   const remainingBlogs = blogs.slice(1);
 
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen md:pt-20 pt-26">
       {/* Hero */}
       <section className="border-b">
         <div className="mx-auto max-w-7xl px-4 py-20 md:px-6 md:py-28">
@@ -34,16 +34,6 @@ export default async function Home() {
       {/* Latest Blog */}
       {latestBlog && (
         <section className="mx-auto max-w-7xl px-4 py-16 md:px-6">
-          {/* <div className="mb-8">
-            <h2 className="text-3xl font-bold tracking-tight">
-              Latest article
-            </h2>
-
-            <p className="mt-2 text-muted-foreground">
-              The latest story published on Inkwell.
-            </p>
-          </div> */}
-
           <FeaturedBlog blog={latestBlog} />
         </section>
       )}
